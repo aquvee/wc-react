@@ -10,7 +10,7 @@ type AquveeComponentProps = {
 }
 
 export default function AquveeComponent(props: AquveeComponentProps) {
-  const { innerClass, format, query, aquveeUrl } = props;
+  const { innerClass = null, format, query, aquveeUrl } = props;
 
   useEffect(() => { import('@aquvee/wc'); return () => { }; }, [])
 
