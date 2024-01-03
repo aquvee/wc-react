@@ -5,6 +5,7 @@
       "jsx": "react",
       "outDir": "./dist",
       "strict": true,
+      "declaration": true,
       "noImplicitAny": true,
       "noImplicitThis": true,
       "alwaysStrict": true,

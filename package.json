@@ -3,11 +3,20 @@
   "version": "0.0.1",
   "description": "Aquvee WebComponent React",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "solaoi",
   "license": "ISC",
   "private": true,
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquvee/wc-react.git"
+  },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@aquvee/wc": "git+https://github.com/aquvee/wc.git"
