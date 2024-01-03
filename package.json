@@ -2,7 +2,7 @@
   "name": "@aquvee/wc-react",
   "version": "0.0.1",
   "description": "Aquvee WebComponent React",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "solaoi",
   "license": "ISC",
   "private": true,
