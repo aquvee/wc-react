@@ -1,6 +1,6 @@
 # Aquvee WebComponent React
 
-`Aquvee WebComponent React` is a React adaptation of the original `aquvee-component`, designed to seamlessly integrate with React applications. It enables easy embedding of your data-driven components in React projects. This guide will walk you through the installation and implementation process.
+`Aquvee WebComponent React` is a React wrapper for the original `AquveeComponent`, designed to seamlessly integrate with React applications. This library facilitates the easy embedding of data-driven components in React projects. This guide will walk you through the installation and implementation process.
 
 ## Installation
 
@@ -30,21 +30,25 @@ Incorporate `AquveeComponent` into your React component's render method or retur
 
 ```jsx
 <AquveeComponent
-    query='Please tell me five pieces of user information'
-    aquveeUrl='http://localhost:8000/wc'>
-    table
+    query="Please tell me five pieces of user information"
+    projectId="your-project-id"
+    isDev={true}
+    styleCss="your-custom-style">
+    <!-- Your desired format goes here -->
 </AquveeComponent>
 ```
 
 ##### Props
 
-- `query`: This is the query string used for data retrieval. In this example, it's `"Please tell me five pieces of user information"`.
-
-- `aquveeUrl`: The endpoint URL where the component fetches data. Here, it's set to `http://localhost:8000/wc`.
+- `query`: The query string used for data retrieval. For example, `"Please tell me five pieces of user information"`.
+- `projectId`: Your unique project identifier, used in constructing the request URL for the production server.
+- `isDev`: (Optional) A boolean indicating whether to use the development server configuration. When set to `true`, it modifies the request URL to a development server.
+- `styleCss`: (Optional) Custom CSS styles for the AquveeComponent. The specified styles will be applied within the component's Shadow DOM.
+- `customUrl`: (Optional) Custom URL for specific endpoint configurations.
 
 ##### Child Content
 
-Specify the output format. It can be a keyword like `"table"` or a custom HTML structure, e.g., `<div class="card-wrapper"><div class="card"></div></div>`. This flexibility allows for varied display styles.
+Define the output format directly as child content of the component. It can be a simple keyword like `"table"` or a more complex HTML structure, allowing for customized display styles.
 
 #### Complete Example
 
@@ -57,9 +61,11 @@ import AquveeComponent from '@aquvee/wc-react';
 function MyApp() {
     return (
         <AquveeComponent
-            query='Please tell me five pieces of user information'
-            aquveeUrl='http://localhost:8000/wc'>
-            table
+            query="Please tell me five pieces of user information"
+            projectId="your-project-id"
+            isDev={true}
+            styleCss="your-custom-style">
+            <!-- Your desired format goes here -->
         </AquveeComponent>
     );
 }
