@@ -3,20 +3,19 @@
 import React, { useEffect } from 'react'
 
 type AquveeComponentProps = {
-  innerClass?: string
-  format?: string
   query: string
   aquveeUrl: string
+  children: React.ReactNode
 }
 
 export default function AquveeComponent(props: AquveeComponentProps) {
-  const { innerClass = null, format, query, aquveeUrl } = props;
+  const { query, aquveeUrl, children } = props;
 
   useEffect(() => { import('@aquvee/wc'); return () => { }; }, [])
 
-  return (<aquvee-component
-            inner_class={innerClass}
-            format={format}
-            query={query}
-            aquvee_url={aquveeUrl} />)
+  return (
+    <aquvee-component query={query} aquvee_url={aquveeUrl}>
+      {children}
+    </aquvee-component>
+  )
 }

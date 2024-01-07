@@ -30,22 +30,21 @@ Incorporate `AquveeComponent` into your React component's render method or retur
 
 ```jsx
 <AquveeComponent
-    innerClass='classForStyling'
-    format='table'
     query='Please tell me five pieces of user information'
-    aquveeUrl='http://localhost:8000/wc'
-/>
+    aquveeUrl='http://localhost:8000/wc'>
+    table
+</AquveeComponent>
 ```
 
 ##### Props
 
-- `innerClass`: Assign a CSS class for styling the component. Replace `"classForStyling"` with your preferred class name.
-
-- `format`: Specify the output format. It can be a predefined keyword like `"table"` or a custom HTML structure, e.g., `<div class="card-wrapper"><div class="card"></div></div>`. This flexibility allows for varied display styles.
-
 - `query`: This is the query string used for data retrieval. In this example, it's `"Please tell me five pieces of user information"`.
 
 - `aquveeUrl`: The endpoint URL where the component fetches data. Here, it's set to `http://localhost:8000/wc`.
+
+##### Child Content
+
+Specify the output format. It can be a keyword like `"table"` or a custom HTML structure, e.g., `<div class="card-wrapper"><div class="card"></div></div>`. This flexibility allows for varied display styles.
 
 #### Complete Example
 
@@ -58,11 +57,10 @@ import AquveeComponent from '@aquvee/wc-react';
 function MyApp() {
     return (
         <AquveeComponent
-            innerClass='classForStyling'
-            format='table'
             query='Please tell me five pieces of user information'
-            aquveeUrl='http://localhost:8000/wc'
-        />
+            aquveeUrl='http://localhost:8000/wc'>
+            table
+        </AquveeComponent>
     );
 }
 

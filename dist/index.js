@@ -26,8 +26,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 function AquveeComponent(props) {
-    const { innerClass = null, format, query, aquveeUrl } = props;
+    const { query, aquveeUrl, children } = props;
     (0, react_1.useEffect)(() => { Promise.resolve().then(() => __importStar(require('@aquvee/wc'))); return () => { }; }, []);
-    return (react_1.default.createElement("aquvee-component", { inner_class: innerClass, format: format, query: query, aquvee_url: aquveeUrl }));
+    return (react_1.default.createElement("aquvee-component", { query: query, aquvee_url: aquveeUrl }, children));
 }
 exports.default = AquveeComponent;
