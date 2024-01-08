@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@aquvee/wc@git+https://github.com/aquvee/wc.git#0.1.6":
-  version "0.1.6"
-  resolved "git+https://github.com/aquvee/wc.git#e16e1d14f5468faeb62c41de3663d5011a2034ee"
+"@aquvee/wc@git+https://github.com/aquvee/wc.git#0.1.7":
+  version "0.1.7"
+  resolved "git+https://github.com/aquvee/wc.git#fc5b4751a1d74633657b356ce8b1a5e686d36427"
 
 "@types/prop-types@*":
   version "15.7.11"
