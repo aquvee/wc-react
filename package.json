@@ -1,6 +1,6 @@
 {
   "name": "@aquvee/wc-react",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Aquvee WebComponent React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "@aquvee/wc": "git+https://github.com/aquvee/wc.git#0.1.5"
+    "@aquvee/wc": "git+https://github.com/aquvee/wc.git#0.1.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.46",

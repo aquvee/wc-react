@@ -26,8 +26,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 function AquveeComponent(props) {
-    const { query, projectId, styleCss, customUrl, isDev, children } = props;
+    const { query, projectId, styleCss, customUrl, isDev, resetCss, children } = props;
     (0, react_1.useEffect)(() => { Promise.resolve().then(() => __importStar(require('@aquvee/wc'))); return () => { }; }, []);
-    return (react_1.default.createElement("aquvee-component", Object.assign({ query: query }, (projectId ? { 'project-id': projectId } : {}), (styleCss ? { 'style-css': styleCss } : {}), (customUrl ? { 'custom-url': customUrl } : {}), (isDev ? { 'is-dev': '' } : {})), children));
+    return (react_1.default.createElement("aquvee-component", Object.assign({ query: query }, (projectId ? { 'project-id': projectId } : {}), (styleCss ? { 'style-css': styleCss } : {}), (customUrl ? { 'custom-url': customUrl } : {}), (isDev ? { 'is-dev': '' } : {}), (resetCss ? { 'reset-css': '' } : {})), children));
 }
 exports.default = AquveeComponent;

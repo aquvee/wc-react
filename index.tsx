@@ -8,11 +8,12 @@ type AquveeComponentProps = {
   styleCss?: string;
   customUrl?: string;
   isDev?: boolean;
+  resetCss?: boolean;
   children?: React.ReactNode;
 }
 
 export default function AquveeComponent(props: AquveeComponentProps) {
-  const { query, projectId, styleCss, customUrl, isDev, children } = props;
+  const { query, projectId, styleCss, customUrl, isDev, resetCss, children } = props;
 
   useEffect(() => { import('@aquvee/wc'); return () => { }; }, [])
 
@@ -23,6 +24,7 @@ export default function AquveeComponent(props: AquveeComponentProps) {
       {...(styleCss ? { 'style-css': styleCss } : {})}
       {...(customUrl ? { 'custom-url': customUrl } : {})}
       {...(isDev ? { 'is-dev': '' } : {})}
+      {...(resetCss ? { 'reset-css': '' } : {})}
     >
       {children}
     </aquvee-component>
