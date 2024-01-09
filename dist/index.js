@@ -24,6 +24,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+require("./globals.css");
 const react_1 = __importStar(require("react"));
 function AquveeComponent(props) {
     const { query, projectId, styleCss, customUrl, isDev, resetCss, children } = props;

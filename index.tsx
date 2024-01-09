@@ -1,5 +1,6 @@
 'use client'
 
+import "./globals.css";
 import React, { useEffect } from 'react'
 
 type AquveeComponentProps = {
