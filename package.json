@@ -1,6 +1,6 @@
 {
   "name": "@aquvee/wc-react",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Aquvee WebComponent React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/aquvee/wc-react.git"
   },
   "scripts": {
-    "build": "tsc && cp global.css dist/global.css",
+    "build": "tsc && cp globals.css dist/globals.css",
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
